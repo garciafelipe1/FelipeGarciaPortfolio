@@ -1,0 +1,135 @@
+{
+  "education": {
+    "title": "Educación",
+    "carreer": "Tecnicatura universitaria en Programación",
+    "approved": "Tecnicatura Completada",
+    "done": "aprobada",
+    "next": "por cursar",
+    "courses": [
+      {
+        "name": "Sist. operativos y Redes",
+        "skills": ["Windows", "Bash", "OSI", "Linux"],
+        "done": "true"
+      },
+      {
+        "name": "Base de Datos",
+        "skills": ["SQL", "Postgres"],
+        "done": "true"
+      },
+      {
+        "name": "Especificación de Software",
+        "skills": ["Requerimientos", "Diagramas", "Diseño"],
+        "done": "true"
+      },
+      {
+        "name": "Ingeniería de Software",
+        "skills": ["Casos de Uso", "UML", "Arquitectura"],
+        "done": "true"
+      }
+    ]
+  },
+  "hero": {
+    "title": "Sobre Mi",
+    "greet": "Hola!",
+    "description": "Soy <span class='font-semibold text-white'>Felipe Garcia </span>, Técnico en Programación y desarrollador web fullstack de Argentina. Me dedico a la creación de interfaces de usuario intuitivas y experiencias web fluidas, optimizando la interacción mediante animaciones sutiles. Busco aplicar mi experticia para construir soluciones de impacto y alto rendimiento."
+  },
+  "header": {
+    "role": "Desarrollador Fullstack",
+    "status": "Disponible para trabajar"
+  },
+  "experience": {
+    "title": "Experiencia",
+    "jobs": [
+      {
+        "company": "No Country",
+        "description": "Plataforma de simulación de empleos",
+        "image": "/images/no-country.png",
+        "jobs": [
+          {
+            "role": "Desarrollador de back-end",
+            "contract": "Contrato de prácticas",
+            "project": "Red social para desarrolladores",
+            "since": "Sep 2024",
+            "until": "Oct 2024"
+          },
+          {
+            "role": "Desarrollador web front-end",
+            "contract": "Contrato de prácticas",
+            "project": "Sitio web de venta y compra de productos de alimentación próximos a caducar ",
+            "since": "Jul 2024",
+            "until": "Sep 2024"
+          }
+        ]
+      }
+    ]
+  },
+  "cv": {
+    "download": "Descargar cv",
+    "read": "Leer cv"
+  },
+  "projects": {
+    "title": "Proyectos",
+    "items": [
+      {
+        "title": "FG Agencia de Software",
+        "description": "Crea tu propio sitio web!",
+        "icon": "/svg/agencia-publicitaria.png",
+        "stack": [
+          {
+            "name": "Redux",
+            "icon": "/svg/redux.svg"
+          },
+          {
+            "name": "React",
+            "icon": "/svg/react.svg"
+          },
+          {
+            "name": "Python",
+            "icon": "/svg/python.svg"
+          },
+          {
+            "name": "Django",
+            "icon": "/svg/django.svg"
+          }
+        ],
+        "href": "https://fg-agency.vercel.app/"
+      },
+
+      {
+        "title": "Antojitos",
+        "description": "E-Commerce de comida por vencer",
+        "icon": "/svg/bigote.png",
+        "stack": [
+          {
+            "name": "Bootstrap",
+            "icon": "/svg/bootstrapsvg.svg"
+          },
+          {
+            "name": "Python",
+            "icon": "/svg/python.svg"
+          },
+          {
+            "name": "Django",
+            "icon": "/svg/django.svg"
+          }
+        ],
+        "href": "https://antojitos-ecommerce.onrender.com/"
+      },{
+        "title": "SpotyLand",
+        "description": "Spotify App Simulation",
+        "icon": "/svg/spotify.svg",
+        "stack": [
+          {
+            "name": "Dart",
+            "icon": "/svg/dart.svg"
+          },
+          {
+            "name": "Flutter",
+            "icon": "/svg/flutter.svg"
+          }
+        ],
+        "href": "https://github.com/garciafelipe1/AppMobileFlutter"
+      }
+    ]
+  }
+}

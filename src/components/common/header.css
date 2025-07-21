@@ -1,0 +1,53 @@
+:root {
+  --scroll-range-end: 150px;
+}
+
+.header {
+  border-bottom: 1px solid hsl(0deg, 0%, 10%);
+  background-color: hsl(0deg, 0%, 5%);
+  backdrop-filter: blur(0px);
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+  z-index: 100;
+}
+
+.pfp {
+  background-color: black;
+  width: 2.5em;
+  height: 2.5em;
+  object-fit: cover;
+  border-radius: 100%;
+}
+
+@supports (animation-timeline: scroll()) {
+  .header {
+    mask-image: linear-gradient(0deg, transparent 0%, black 20%);
+    animation: blurHeader linear forwards;
+    animation-timeline: scroll();
+    animation-range: 0 var(--scroll-range-end);
+    background-color: transparent;
+    padding-top: 3rem;
+  }
+
+  .pfp {
+    animation: resizeImage linear forwards;
+    animation-timeline: scroll();
+    animation-range: 0 var(--scroll-range-end);
+    width: 3.5em;
+    height: 3.5em;
+  }
+
+  @keyframes blurHeader {
+    to {
+      backdrop-filter: blur(10px);
+      padding-top: 1em;
+    }
+  }
+
+  @keyframes resizeImage {
+    to {
+      width: 2.5em;
+      height: 2.5em;
+    }
+  }
+}

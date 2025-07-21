@@ -1,0 +1,33 @@
+---
+import BottomBlur from '@/components/common/bottom-blur.astro'
+import Footer from '@/components/common/footer.astro'
+import { ViewTransitions } from 'astro:transitions'
+import Header from '../components/common/Header.astro'
+import '../styles/index.css'
+interface Props {
+  title: string
+}
+
+const { title } = Astro.props
+---
+
+<!doctype html>
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8' />
+    <meta name='description' content='Astro description' />
+    <meta name='viewport' content='width=device-width' />
+    <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
+    <meta name='generator' content={Astro.generator} />
+    <title>{title}</title>
+    <ViewTransitions />
+  </head>
+  <body class='px-6'>
+    <Header />
+    <main class='relative mx-auto max-w-screen-tablet pb-20 pt-36'>
+      <slot />
+      <Footer />
+    </main>
+    <BottomBlur />
+  </body>
+</html>

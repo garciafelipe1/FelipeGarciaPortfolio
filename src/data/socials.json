@@ -1,0 +1,12 @@
+[
+  {
+    "name": "Github",
+    "href": "https://github.com/GarciaFelipe1",
+    "icon": "/svg/github.svg"
+  },
+  {
+    "name": "Linkedin",
+    "href": "https://www.linkedin.com/in/garciafelipe1/",
+    "icon": "/svg/linkedin.svg"
+  }
+]

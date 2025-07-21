@@ -1,0 +1,29 @@
+---
+import { getI18n } from '@/i18n/getI18n'
+
+const a = Astro.currentLocale
+const i18n = getI18n(a)
+---
+
+<section class='flex flex-col gap-4'>
+  <h3 class='hero-child font-semibold'>{i18n.hero.title}</h3>
+  <section class='prose prose-invert w-full text-secondary'>
+    <p class='hero-child'>{i18n.hero.greet} 👋</p>
+    <p class='hero-child' set:html={i18n.hero.description} />
+  </section>
+</section>
+<script>
+  import { animate, stagger } from 'motion'
+
+  document.addEventListener('astro:page-load', () => {
+    animate(
+      '.hero-child',
+      { opacity: [0, 1], y: [100, 0], filter: ['blur(10px)', 'blur(0px)'] },
+      {
+        type: 'spring',
+        duration: 2,
+        delay: stagger(0.1)
+      }
+    )
+  })
+</script>
