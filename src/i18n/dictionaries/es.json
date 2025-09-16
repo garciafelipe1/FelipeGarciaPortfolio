@@ -114,7 +114,7 @@
       {
         "title": "Antojitos",
         "description": "E-Commerce de comida por vencer",
-        "icon": "/svg/bigote.png",
+        "icon": "/images/bigote-negro.png",
         "stack": [
           {
             "name": "Bootstrap",
@@ -149,7 +149,7 @@
       ,{
         "title": "Reparatodo",
         "description": "Sitio web para servicio técnico de electrodomésticos",
-        "icon": "public/images/image.png",
+        "icon": "/svg/re.jpg",
         "stack": [
           {
             "name": "Next.js",

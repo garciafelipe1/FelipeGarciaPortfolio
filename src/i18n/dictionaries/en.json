@@ -149,7 +149,7 @@
       },{
         "title": "Reparatodo",
         "description": "Technical service for appliance repairs",
-        "icon": "public/images/image.png",
+        "icon": "/svg/re.jpg",
         "stack": [
           {
             "name": "Next.js",
