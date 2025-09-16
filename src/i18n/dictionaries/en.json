@@ -63,20 +63,19 @@
         ]
       },
       {
-        "company": "Freelance",
+        "company": "Reparatodo",
         "description": "Technical service for appliance repairs",
-        "image": "/public/images/logo.png",
+        "image": "/images/image.png",
         "jobs": [
-      {
-      "role": "Fullstack Web Developer",
-      "contract": "Personal and client projects",
-      "project": "Website development for the company and clients",
-      "since": "Oct 2025",
-      "until": "Sept 2025"
+          {
+            "role": "Fullstack Web Developer",
+            "contract": "Self-employed",
+            "project": "Website for a technical service company",
+            "since": "Mar 2023",
+            "until": "Present"
+          }
+        ]
       }
-  ]
-      }
-      
     ]
   },
   "cv": {
@@ -150,7 +149,7 @@
       },{
         "title": "Reparatodo",
         "description": "Technical service for appliance repairs",
-        "icon": "public/images/logo.png",
+        "icon": "public/images/image.png",
         "stack": [
           {
             "name": "Next.js",

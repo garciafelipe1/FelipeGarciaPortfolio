@@ -65,7 +65,7 @@
       {
         "company": "Reparatodo",
         "description": "Servicio técnico de arreglos de electrodomésticos",
-        "image": "/public/images/logo.png",
+        "image": "/images/image.png",
         "jobs": [
           {
             "role": "Desarrollador web fullstack",
@@ -149,7 +149,7 @@
       ,{
         "title": "Reparatodo",
         "description": "Sitio web para servicio técnico de electrodomésticos",
-        "icon": "public/images/logo.png",
+        "icon": "public/images/image.png",
         "stack": [
           {
             "name": "Next.js",
