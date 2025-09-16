@@ -61,6 +61,21 @@
             "until": "Sep 2024"
           }
         ]
+      },
+      {
+        "company": "Reparatodo",
+        "description": "Servicio técnico de arreglos de electrodomésticos",
+        "image": "/public/images/logo.png",
+        "jobs": [
+          {
+            "role": "Desarrollador web fullstack",
+            "contract": "Proyectos personales y para clientes",
+            "project": "Desarrollo de sitio web para la empresa y para clientes",
+            "since": "Oct 2025",
+            "until": "Sept 2025"
+            
+          }
+        ]
       }
     ]
   },
@@ -131,6 +146,27 @@
         ],
         "href": "https://github.com/garciafelipe1/AppMobileFlutter"
       }
+      ,{
+        "title": "Reparatodo",
+        "description": "Sitio web para servicio técnico de electrodomésticos",
+        "icon": "public/images/logo.png",
+        "stack": [
+          {
+            "name": "Next.js",
+            "icon": "/svg/nextjs.svg"
+          },
+          {
+            "name": "Tailwind CSS",
+            "icon": "/svg/tailwind.svg"
+          },
+          {
+            "name": "Typescript",
+            "icon": "/svg/typescript-logo-svgrepo-com.svg"
+          }
+        ],
+        "href": "https://www.reparatodobbl.com/"
+      }
+      
     ]
   }
 }

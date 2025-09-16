@@ -61,7 +61,22 @@
             "until": "Sep 2024"
           }
         ]
+      },
+      {
+        "company": "Freelance",
+        "description": "Technical service for appliance repairs",
+        "image": "/public/images/logo.png",
+        "jobs": [
+      {
+      "role": "Fullstack Web Developer",
+      "contract": "Personal and client projects",
+      "project": "Website development for the company and clients",
+      "since": "Oct 2025",
+      "until": "Sept 2025"
       }
+  ]
+      }
+      
     ]
   },
   "cv": {
@@ -99,7 +114,7 @@
       {
         "title": "Antojitos",
         "description": "E-Commerce for food products close to expiration date",
-        "icon": "/svg/bigote.png",
+        "icon": "/images/bigote-negro.png",
         "stack": [
           {
             "name": "Bootstrap",
@@ -132,6 +147,25 @@
           }
         ],
         "href": "https://github.com/garciafelipe1/AppMobileFlutter"
+      },{
+        "title": "Reparatodo",
+        "description": "Technical service for appliance repairs",
+        "icon": "public/images/logo.png",
+        "stack": [
+          {
+            "name": "Next.js",
+            "icon": "/svg/nextjs.svg"
+          },
+          {
+            "name": "Tailwind CSS",
+            "icon": "/svg/tailwind.svg"
+          },
+          {
+            "name": "Typescript",
+            "icon": "/svg/typescript-logo-svgrepo-com.svg"
+          }
+        ],
+        "href": "https://www.reparatodobbl.com/"
       }
       
     ]
