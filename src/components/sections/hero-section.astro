@@ -1,14 +1,54 @@
 ---
 import { getI18n } from '@/i18n/getI18n'
 
-const a = Astro.currentLocale
-const i18n = getI18n(a)
+const locale = Astro.currentLocale ?? 'en'
+const i18n = getI18n(locale)
+const cvHref = locale === 'es' ? '/FelipeGarciaCV.pdf' : '/FelipeGarciaCV_EN.pdf'
 ---
 
-<section class='flex flex-col gap-4'>
-  <h3 class='hero-child font-semibold'>{i18n.hero.title}</h3>
+<section class='flex flex-col gap-6'>
+  <header class='flex flex-col gap-3'>
+    <p class='hero-child text-sm font-semibold text-secondary'>
+      {i18n.hero.greet} 👋
+    </p>
+    <h1 class='hero-child text-3xl font-semibold tracking-tight sm:text-4xl'>
+      {i18n.hero.title}
+    </h1>
+    <p class='hero-child text-secondary'>{i18n.hero.tagline}</p>
+  </header>
+
+  <div class='hero-child flex flex-wrap gap-2'>
+    {i18n.hero.proof.map((item) => (
+      <span class='rounded-full border border-border bg-muted px-3 py-1 text-xs text-secondary'>
+        {item}
+      </span>
+    ))}
+  </div>
+
+  <div class='hero-child flex flex-wrap gap-2'>
+    <a
+      href='#projects'
+      class='flex min-w-fit items-center justify-center gap-2 rounded-lg border border-border bg-background px-4 py-2 text-sm font-semibold transition hover:bg-muted'
+    >
+      {i18n.hero.cta.projects}
+    </a>
+    <a
+      href={cvHref}
+      download
+      class='flex min-w-fit items-center justify-center gap-2 rounded-lg border border-border bg-background px-4 py-2 text-sm font-semibold transition hover:bg-muted'
+    >
+      <img alt='' src='/svg/cv.svg' class='size-4' />
+      {i18n.hero.cta.downloadCv}
+    </a>
+    <a
+      href='mailto:feli2003garcia@gmail.com'
+      class='flex min-w-fit items-center justify-center gap-2 rounded-lg border border-border bg-background px-4 py-2 text-sm font-semibold transition hover:bg-muted'
+    >
+      {i18n.hero.cta.contact}
+    </a>
+  </div>
+
   <section class='prose prose-invert w-full text-secondary'>
-    <p class='hero-child'>{i18n.hero.greet} 👋</p>
     <p class='hero-child' set:html={i18n.hero.description} />
   </section>
 </section>

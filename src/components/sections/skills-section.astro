@@ -1,0 +1,70 @@
+---
+import { getI18n } from '@/i18n/getI18n'
+const i18n = getI18n(Astro.currentLocale)
+const { skills } = i18n
+const accents = ['border-l-primary/50', 'border-l-primary/40', 'border-l-primary/30']
+---
+
+<section class='skills-section group flex flex-col gap-6' id='skills'>
+  <header class='flex flex-col gap-2'>
+    <div class='flex items-center [&>:first-child]:mr-2'>
+      <img
+        class='size-6 translate-x-4 rounded-md border border-primary/20 bg-muted p-1 text-white opacity-0 transition group-hover:translate-x-0 group-hover:opacity-100'
+        src='/svg/cube.svg'
+        alt=''
+      />
+      <h2 class='-translate-x-8 text-xl font-semibold transition group-hover:translate-x-0'>
+        {skills.title}
+      </h2>
+    </div>
+    {skills.subtitle ? (
+      <p class='max-w-2xl text-sm text-secondary'>
+        {skills.subtitle}
+      </p>
+    ) : null}
+  </header>
+
+  <ul class='grid gap-4 sm:grid-cols-2 lg:grid-cols-3' role='list'>
+    {skills.items.map((item, i) => (
+      <li
+        class={`skills-card flex flex-col rounded-xl border border-border bg-background/50 pl-4 transition hover:border-primary/20 hover:bg-background sm:pl-5 ${accents[i] ?? 'border-l-primary/30'} border-l-4`}
+      >
+        <div class='flex flex-1 flex-col py-4 pr-4 sm:py-5 sm:pr-5'>
+          <h3 class='text-base font-semibold tracking-tight'>
+            {item.title}
+          </h3>
+          <p class='mt-1.5 text-sm leading-relaxed text-secondary'>
+            {item.description}
+          </p>
+          <ul class='mt-4 flex flex-wrap gap-2' role='list'>
+            {item.chips.map((chip) => (
+              <li>
+                <span class='inline-block rounded-md border border-border/80 bg-muted/80 px-2.5 py-1 text-xs font-medium text-secondary'>
+                  {chip}
+                </span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </li>
+    ))}
+  </ul>
+</section>
+
+<script>
+  import { animate, inView, stagger } from 'motion'
+
+  document.addEventListener('astro:page-load', () => {
+    inView(
+      '.skills-section',
+      ({ target }) => {
+        animate(
+          target.querySelectorAll('.skills-card'),
+          { opacity: [0, 1], y: [12, 0] },
+          { type: 'spring', duration: 0.6, delay: stagger(0.08) }
+        )
+      },
+      { margin: '-80px' }
+    )
+  })
+</script>

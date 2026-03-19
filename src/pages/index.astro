@@ -3,14 +3,20 @@ import EducationSection from '@/components/sections/education-section.astro'
 import ExperienceSection from '../components/sections/experience-section.astro'
 import HeroSection from '../components/sections/hero-section.astro'
 import ProjectsSection from '../components/sections/projects-section.astro'
+import SkillsSection from '../components/sections/skills-section.astro'
 import Layout from '../layouts/Layout.astro'
 ---
 
-<Layout title='Felipe Garcia | Portfolio'>
+<Layout
+  title='Felipe Garcia | Full Stack Developer'
+  description='Product-oriented Full Stack Developer. Selected projects, experience, and education.'
+  ogImage='/images/FelipeGarcia.jpg'
+>
   <section class='flex flex-col gap-20'>
     <HeroSection />
-    <ProjectsSection />
     <ExperienceSection />
+    <SkillsSection />
+    <ProjectsSection />
     <EducationSection />
   </section>
 </Layout>

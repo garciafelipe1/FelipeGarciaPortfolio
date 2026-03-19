@@ -1,6 +1,9 @@
 ---
 import { getI18n } from '@/i18n/getI18n'
-const { experience } = getI18n(Astro.currentLocale)
+const i18n = getI18n(Astro.currentLocale)
+const { experience, cv } = i18n
+const lang = Astro.currentLocale ?? 'en'
+const cvHref = lang === 'es' ? '/FelipeGarciaCV.pdf' : '/FelipeGarciaCV_EN.pdf'
 ---
 
 <section class='experience-section group/exp flex flex-col gap-4 opacity-0'>
@@ -51,25 +54,25 @@ const { experience } = getI18n(Astro.currentLocale)
     }
   </article>
   <footer class='flex flex-wrap gap-2 *:flex-1'>
-  <a
-  href='/public//FelipeGarciaCV_EN.pdf'
-  download='CVFelipeGarcia.pdf'
-  class='flex min-w-fit items-center justify-center gap-2 rounded-lg border border-border px-4 py-2 text-sm font-semibold transition hover:bg-muted'
->
-  <img alt='download cv icon' src='/svg/cv.svg' class='size-4' />
-  Descargar CV
-</a>
+    <a
+      href={cvHref}
+      download
+      class='flex min-w-fit items-center justify-center gap-2 rounded-lg border border-border px-4 py-2 text-sm font-semibold transition hover:bg-muted'
+    >
+      <img alt='download cv icon' src='/svg/cv.svg' class='size-4' />
+      {cv.download}
+    </a>
 
-<a
-  href='/public/FelipeGarciaCV_EN.pdf'
-  target='_blank'
-  rel='noopener noreferrer'
-  class='flex min-w-fit items-center justify-center gap-2 rounded-lg border border-border px-4 py-2 text-sm font-semibold transition hover:bg-muted'
->
-  <img alt='read cv icon' src='/svg/download.svg' class='size-4' />
-  Leer CV
-</a>
-</footer>
+    <a
+      href={cvHref}
+      target='_blank'
+      rel='noopener noreferrer'
+      class='flex min-w-fit items-center justify-center gap-2 rounded-lg border border-border px-4 py-2 text-sm font-semibold transition hover:bg-muted'
+    >
+      <img alt='read cv icon' src='/svg/download.svg' class='size-4' />
+      {cv.read}
+    </a>
+  </footer>
 </section>
 
 <script>

@@ -30,20 +30,41 @@
     ]
   },
   "hero": {
-    "title": "Sobre Mi",
-    "greet": "Hola!",
-    "description": "Soy <span class='font-semibold text-white'>Felipe Garcia </span>, Técnico en Programación y desarrollador web fullstack de Argentina. Me dedico a la creación de interfaces de usuario intuitivas y experiencias web fluidas, optimizando la interacción mediante animaciones sutiles. Busco aplicar mi experticia para construir soluciones de impacto y alto rendimiento."
+    "title": "Desarrollador Full Stack",
+    "greet": "Hola, soy Felipe",
+    "tagline": "Diseño y desarrollo aplicaciones web de punta a punta con React, Next.js, Node.js y Django. Llevo a producción funcionalidades que escalan: autenticación, pagos, APIs REST y despliegue.",
+    "description": "Soy <span class='font-semibold text-white'>Felipe Garcia</span>, Desarrollador Full Stack y Técnico Universitario en Programación, radicado en Argentina. Me especializo en arquitectura limpia, rendimiento y en entregar software confiable en entornos de equipo.",
+    "cta": {
+      "projects": "Ver proyectos",
+      "downloadCv": "Descargar CV",
+      "contact": "Contacto"
+    },
+    "proof": ["Ecommerce en producción", "Auth y pagos", "Deploy y DevOps"]
   },
   "header": {
-    "role": "Desarrollador Fullstack",
+    "role": "Desarrollador Full Stack",
     "status": "Disponible para trabajar"
   },
   "experience": {
     "title": "Experiencia",
     "jobs": [
       {
+        "company": "Las Flores de la Imprenta",
+        "description": "Florería y ecommerce",
+        "image": "/images/las-flores-de-la-imprenta.png",
+        "jobs": [
+          {
+            "role": "Desarrollador Full Stack",
+            "contract": "Contractor",
+            "project": "Plataforma ecommerce en producción (Medusa.js + Next.js)",
+            "since": "Jun 2025",
+            "until": "Feb 2026"
+          }
+        ]
+      },
+      {
         "company": "No Country",
-        "description": "Plataforma de simulación de empleos",
+        "description": "Plataforma de simulación de trabajo remoto",
         "image": "/images/no-country.png",
         "jobs": [
           {
@@ -56,24 +77,9 @@
           {
             "role": "Desarrollador web front-end",
             "contract": "Contrato de prácticas",
-            "project": "Sitio web de venta y compra de productos de alimentación próximos a caducar ",
+            "project": "Ecommerce de productos alimenticios por vencer (marketplace de descuentos).",
             "since": "Jul 2024",
             "until": "Sep 2024"
-          }
-        ]
-      },
-      {
-        "company": "Reparatodo",
-        "description": "Servicio técnico de arreglos de electrodomésticos",
-        "image": "/images/image.png",
-        "jobs": [
-          {
-            "role": "Desarrollador web fullstack",
-            "contract": "Proyectos personales y para clientes",
-            "project": "Desarrollo de sitio web para la empresa y para clientes",
-            "since": "Oct 2025",
-            "until": "Sept 2025"
-            
           }
         ]
       }
@@ -83,13 +89,73 @@
     "download": "Descargar cv",
     "read": "Leer cv"
   },
+  "skills": {
+    "title": "Capacidades",
+    "subtitle": "Tecnologías y prácticas con las que entrego software listo para producción.",
+    "items": [
+      {
+        "title": "Frontend",
+        "description": "UI moderna, accesibilidad y optimización de rendimiento.",
+        "chips": ["React", "Next.js", "TypeScript", "Tailwind CSS", "i18n", "SEO"]
+      },
+      {
+        "title": "Backend",
+        "description": "APIs REST seguras y lógica de negocio escalable.",
+        "chips": ["Node.js", "Express", "Python", "Django", "REST APIs", "Auth"]
+      },
+      {
+        "title": "DevOps",
+        "description": "Entrega confiable desde desarrollo local hasta producción.",
+        "chips": ["Docker", "CI/CD básico", "Vercel", "Railway", "Env config", "Monitoreo"]
+      }
+    ]
+  },
+  "caseStudies": {
+    "las-flores": {
+      "title": "Las Flores de la Imprenta",
+      "client": "Florería e imprenta",
+      "period": "Jun 2025 – Feb 2026",
+      "problem": "El cliente necesitaba una plataforma ecommerce moderna para vender arreglos florales y membresías, con catálogo, checkout seguro y presencia profesional para el mercado argentino.",
+      "solution": "Desarrollé un ecommerce en producción con Medusa.js y Next.js: catálogo con filtros, checkout en múltiples pasos integrado con Mercado Pago, planes de membresía y cuentas de cliente con Google OAuth.",
+      "role": "Lideré el desarrollo end-to-end: arquitectura, frontend (Next.js, React, Tailwind), backend y APIs (Medusa.js), integración de pagos y OAuth, analytics (GA4, Meta Pixel), i18n y rutas amigables para SEO. Contenedorización con Docker y despliegue en Vercel y Railway.",
+      "result": "Plataforma en producción, con catálogo, membresías y checkout operativos para el cliente.",
+      "liveUrl": "https://www.lasfloresdelaimprenta.com/es/ar",
+      "liveLabel": "Ver sitio en vivo",
+      "backLabel": "Volver a proyectos"
+    }
+  },
   "projects": {
     "title": "Proyectos",
     "items": [
       {
+        "title": "Las Flores de la Imprenta",
+        "description": "Ecommerce en producción con catálogo, membresías y checkout.",
+        "icon": "/images/las-flores-de-la-imprenta.png",
+        "image": "/images/las-flores-home.png",
+        "meta": "Full Stack · 2025–2026 · Ecommerce",
+        "tags": ["Producción", "Checkout", "i18n"],
+        "stack": [
+          {
+            "name": "Next.js",
+            "icon": "/svg/nextjs.svg"
+          },
+          {
+            "name": "TypeScript",
+            "icon": "/svg/typescript-logo-svgrepo-com.svg"
+          },
+          {
+            "name": "Tailwind CSS",
+            "icon": "/svg/tailwind.svg"
+          }
+        ],
+        "href": "https://www.lasfloresdelaimprenta.com/es/ar",
+        "caseStudySlug": "las-flores"
+      },
+      {
         "title": "FG Agencia de Software",
-        "description": "Crea tu propio sitio web!",
+        "description": "Agencia de desarrollo web y productos digitales.",
         "icon": "/svg/agencia-publicitaria.png",
+        "image": "/images/fg-agency.png",
         "stack": [
           {
             "name": "Redux",
@@ -108,12 +174,12 @@
             "icon": "/svg/django.svg"
           }
         ],
-        "href": "https://fg-agency.vercel.app/"
+        "href": "https://fgagency.vercel.app/"
       },
 
       {
         "title": "Antojitos",
-        "description": "E-Commerce de comida por vencer",
+        "description": "Ecommerce de productos alimenticios por vencer (marketplace de descuentos).",
         "icon": "/images/bigote-negro.png",
         "stack": [
           {
@@ -132,8 +198,9 @@
         "href": "https://antojitos-ecommerce.onrender.com/"
       },{
         "title": "SpotyLand",
-        "description": "Spotify App Simulation",
+        "description": "App móvil inspirada en Spotify (Flutter).",
         "icon": "/svg/spotify.svg",
+        "image": "/images/spotyland-home.png",
         "stack": [
           {
             "name": "Dart",
@@ -145,26 +212,6 @@
           }
         ],
         "href": "https://github.com/garciafelipe1/AppMobileFlutter"
-      }
-      ,{
-        "title": "Reparatodo",
-        "description": "Sitio web para servicio técnico de electrodomésticos",
-        "icon": "/svg/re.jpg",
-        "stack": [
-          {
-            "name": "Next.js",
-            "icon": "/svg/nextjs.svg"
-          },
-          {
-            "name": "Tailwind CSS",
-            "icon": "/svg/tailwind.svg"
-          },
-          {
-            "name": "Typescript",
-            "icon": "/svg/typescript-logo-svgrepo-com.svg"
-          }
-        ],
-        "href": "https://www.reparatodobbl.com/"
       }
       
     ]

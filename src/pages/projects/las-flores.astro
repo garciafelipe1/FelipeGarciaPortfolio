@@ -1,0 +1,88 @@
+---
+import Layout from '@/layouts/Layout.astro'
+import { getI18n } from '@/i18n/getI18n'
+
+const i18n = getI18n('en')
+const cs = i18n.caseStudies['las-flores']
+if (!cs) throw new Error('Case study las-flores not found')
+---
+
+<Layout
+  title={`${cs.title} · Case Study | Felipe Garcia`}
+  description={cs.problem.slice(0, 155) + '…'}
+  ogImage='/images/las-flores-home.png'
+>
+  <article class='mx-auto max-w-2xl'>
+    <header class='mb-10 flex flex-col gap-2'>
+      <a
+        href='/'
+        class='mb-2 inline-flex items-center gap-2 text-sm text-secondary transition hover:text-primary'
+      >
+        <span aria-hidden='true'>←</span>
+        {cs.backLabel}
+      </a>
+      <p class='text-sm font-medium text-secondary'>{cs.client} · {cs.period}</p>
+      <h1 class='text-3xl font-semibold tracking-tight sm:text-4xl'>
+        {cs.title}
+      </h1>
+    </header>
+
+    <div class='relative mb-10 overflow-hidden rounded-xl border border-border bg-muted'>
+      <img
+        src='/images/las-flores-home.png'
+        alt={`${cs.title} — homepage`}
+        class='h-auto w-full object-cover'
+        width={1200}
+        height={630}
+      />
+    </div>
+
+    <div class='prose prose-invert flex flex-col gap-10'>
+      <section>
+        <h2 class='mb-2 text-sm font-semibold uppercase tracking-wider text-secondary'>
+          Problem
+        </h2>
+        <p class='text-secondary'>{cs.problem}</p>
+      </section>
+
+      <section>
+        <h2 class='mb-2 text-sm font-semibold uppercase tracking-wider text-secondary'>
+          Solution
+        </h2>
+        <p class='text-secondary'>{cs.solution}</p>
+      </section>
+
+      <section>
+        <h2 class='mb-2 text-sm font-semibold uppercase tracking-wider text-secondary'>
+          My role
+        </h2>
+        <p class='text-secondary'>{cs.role}</p>
+      </section>
+
+      <section>
+        <h2 class='mb-2 text-sm font-semibold uppercase tracking-wider text-secondary'>
+          Result
+        </h2>
+        <p class='text-secondary'>{cs.result}</p>
+      </section>
+    </div>
+
+    <footer class='mt-12 flex flex-wrap gap-3 border-t border-border pt-8'>
+      <a
+        href={cs.liveUrl}
+        target='_blank'
+        rel='noopener noreferrer'
+        class='inline-flex items-center justify-center gap-2 rounded-lg border border-border bg-background px-4 py-2.5 text-sm font-semibold transition hover:bg-muted'
+      >
+        {cs.liveLabel}
+        <span aria-hidden='true'>→</span>
+      </a>
+      <a
+        href='/'
+        class='inline-flex items-center justify-center gap-2 rounded-lg border border-border bg-background px-4 py-2.5 text-sm font-semibold transition hover:bg-muted'
+      >
+        {cs.backLabel}
+      </a>
+    </footer>
+  </article>
+</Layout>

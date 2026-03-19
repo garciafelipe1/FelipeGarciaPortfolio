@@ -2,9 +2,10 @@
 import Card from '../Card.astro'
 import { getI18n } from '@/i18n/getI18n'
 const i18n = getI18n(Astro.currentLocale)
+const locale = Astro.currentLocale
 ---
 
-<section class='group flex flex-col gap-4'>
+<section class='group flex flex-col gap-4' id='projects'>
   <header class='flex items-center [&>:first-child]:mr-2'>
     <img
       class='size-6 translate-x-4 rounded-md border border-primary/20 bg-muted p-1 text-white opacity-0 transition group-hover:translate-x-0 group-hover:opacity-100'
@@ -20,7 +21,7 @@ const i18n = getI18n(Astro.currentLocale)
   <ul
     class='grid grid-cols-[repeat(auto-fit,minmax(min(100%,18em),1fr))] gap-2'
   >
-    {i18n.projects.items.map((project) => <Card {...project} />)}
+    {i18n.projects.items.map((project) => <Card {...project} locale={locale} />)}
   </ul>
 </section>
 
