@@ -122,6 +122,18 @@
       "liveUrl": "https://www.lasfloresdelaimprenta.com/es/ar",
       "liveLabel": "View live site",
       "backLabel": "Back to projects"
+    },
+    "ef": {
+      "title": "EF",
+      "client": "Portfolio project · Social + Blog",
+      "period": "2025 – 2026",
+      "problem": "Build a realistic full‑stack product that demonstrates social interactions, permissions, and complex client↔API flows beyond simple CRUD.",
+      "solution": "Implemented a Twitter‑like feed (For you / Following, infinite scroll) combined with blog‑style rich posts (categories and article content). Added profiles (avatar, banner, bio, links), follows, likes, nested replies, bookmarks, notifications, search, and interaction metrics.",
+      "role": "End‑to‑end development across frontend (Next.js 15, React 19, TypeScript, Redux Toolkit, TipTap, Playwright E2E) and backend (Django 4.2, DRF, JWT, Channels + Redis, Celery, Postgres). Containerized with Docker Compose and deployed to Railway (Nixpacks).",
+      "result": "A production‑style social product demo with multiple actors, authorization rules, real‑time capabilities, and automated E2E coverage.",
+      "liveUrl": "/projects/ef",
+      "liveLabel": "Open project page",
+      "backLabel": "Back to projects"
     }
   },
   "projects": {
@@ -150,6 +162,34 @@
         ],
         "href": "https://www.lasfloresdelaimprenta.com/es/ar",
         "caseStudySlug": "las-flores"
+      },
+      {
+        "title": "EF",
+        "description": "Full‑stack social + blog product with rich posts, real-time features, and end‑to‑end testing.",
+        "icon": "/svg/book-tracker.svg",
+        "image": "/images/ef-feed.png",
+        "meta": "Full Stack · Social + Blog · Product demo",
+        "tags": ["Realtime", "Permissions", "E2E"],
+        "stack": [
+          {
+            "name": "Next.js",
+            "icon": "/svg/nextjs.svg"
+          },
+          {
+            "name": "TypeScript",
+            "icon": "/svg/typescript-logo-svgrepo-com.svg"
+          },
+          {
+            "name": "Django",
+            "icon": "/svg/django.svg"
+          },
+          {
+            "name": "Docker",
+            "icon": "/svg/drizzle.svg"
+          }
+        ],
+        "href": "/projects/ef",
+        "caseStudySlug": "ef"
       },
       {
         "title": "FG Software Agency",
